@@ -90,7 +90,7 @@ const filterPizzas=pizzas.filter(
 (filterPizzas.map(pizza=>{
 return(
     <div className={styles.pizzaItem} key={pizza.id}>
-        <Link href={'/${pizza.slug}'}><a className={styles.pizzaImageBox}>
+        <Link href={`/${pizza.slug}`}><a className={styles.pizzaImageBox}>
         <img src={pizza.image} alt={pizza.name} className={styles.pizzaImage}/></a></Link>
         <div className={styles.pizzaText}>
             <p className={styles.pizzaHeader}>{pizza.name}</p>
