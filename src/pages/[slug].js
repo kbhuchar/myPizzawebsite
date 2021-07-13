@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../styles/Pizza.module.css';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 export default function Pizza({pizza, otherPizzas }) {
     return (
         <div className={styles.container}>
@@ -10,7 +11,7 @@ export default function Pizza({pizza, otherPizzas }) {
                 
             </Head>
             <div className={styles.pizzaWrapperLeft}>
-                <img src={pizza.image} alt={pizza.name} className={styles.pizzaImage}/>
+                <Image src={pizza.image} alt={pizza.name} className={styles.pizzaImage} width="100" height="100"/>
             </div>
             <div className={styles.pizzaWrapperRight}>
                 <div className={styles.pizzaInfo}>
@@ -28,7 +29,7 @@ export default function Pizza({pizza, otherPizzas }) {
                      return(
                          <div className={styles.otherPizzas} key={otherpizza.id}>
                          <Link href={"/" +otherpizza.slug}><a>
-                             <img src={otherpizza.image} alt={otherpizza.name}/><p>{otherpizza.name}</p></a></Link>
+                             <Image src={otherpizza.image} alt={otherpizza.name} width="100" height="100"/><p>{otherpizza.name}</p></a></Link>
                              </div>
                      )
                  })}

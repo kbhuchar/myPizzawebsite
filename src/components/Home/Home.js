@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Home.module.css'
 import Link from 'next/link';
 import {useState} from 'react';
+import Image from 'next/image'
 export default function Home({pizzas}) {
     
 const[keyword,setKeyword]=useState('');
@@ -29,7 +30,7 @@ const filterPizzas=pizzas.filter(
 return(
     <div className={styles.pizzaItem} key={pizza.id}>
         <Link href={`/${pizza.slug}`}><a className={styles.pizzaImageBox}>
-        <img src={pizza.image} alt={pizza.name} className={styles.pizzaImage}/></a></Link>
+        <Image src={pizza.image} alt={pizza.name} className={styles.pizzaImage} width="100" height="100"/></a></Link>
         <div className={styles.pizzaText}>
             <p className={styles.pizzaHeader}>{pizza.name}</p>
             <p className={styles.pizzaToppings}>{pizza.toppings.map(topping=> topping).join(', ')}</p>
