@@ -10,7 +10,8 @@ function MyApp({ Component, pageProps }) {
      <ul className={styles.navbarContactBox}>
      <Link href="/"><a>
        <div className={styles.brandPizza}>
-         <Image src="/assets/pizza.svg" alt="brand" width="100" height="100"/>
+         <Image src="/assets/pizza.svg" alt="brand" width={500}
+      height={500}/>
          <p> Pizza Shop</p>
        </div>
        </a></Link>

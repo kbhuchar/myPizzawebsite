@@ -11,7 +11,8 @@ export default function Pizza({pizza, otherPizzas }) {
                 
             </Head>
             <div className={styles.pizzaWrapperLeft}>
-                <Image src={pizza.image} alt={pizza.name} className={styles.pizzaImage} width="100" height="100"/>
+                <Image src={pizza.image} alt={pizza.name} className={styles.pizzaImage} width={500}
+      height={500} />
             </div>
             <div className={styles.pizzaWrapperRight}>
                 <div className={styles.pizzaInfo}>
@@ -29,7 +30,8 @@ export default function Pizza({pizza, otherPizzas }) {
                      return(
                          <div className={styles.otherPizzas} key={otherpizza.id}>
                          <Link href={"/" +otherpizza.slug}><a>
-                             <Image src={otherpizza.image} alt={otherpizza.name} width="100" height="100"/><p>{otherpizza.name}</p></a></Link>
+                             <Image src={otherpizza.image} alt={otherpizza.name} width={500}
+      height={500}/><p>{otherpizza.name}</p></a></Link>
                              </div>
                      )
                  })}

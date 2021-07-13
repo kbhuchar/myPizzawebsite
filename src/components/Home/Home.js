@@ -30,7 +30,8 @@ const filterPizzas=pizzas.filter(
 return(
     <div className={styles.pizzaItem} key={pizza.id}>
         <Link href={`/${pizza.slug}`}><a className={styles.pizzaImageBox}>
-        <Image src={pizza.image} alt={pizza.name} className={styles.pizzaImage} width="100" height="100"/></a></Link>
+        <Image src={pizza.image} alt={pizza.name} className={styles.pizzaImage} width={500}
+      height={500}/></a></Link>
         <div className={styles.pizzaText}>
             <p className={styles.pizzaHeader}>{pizza.name}</p>
             <p className={styles.pizzaToppings}>{pizza.toppings.map(topping=> topping).join(', ')}</p>
